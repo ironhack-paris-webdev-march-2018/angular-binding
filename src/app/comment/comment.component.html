@@ -1,0 +1,22 @@
+<h2>User Feedback</h2>
+
+<label>
+  Your Name:
+  <input [(ngModel)]="newMessage.user" type="text" placeholder="Wonder Woman" />
+</label>
+
+<div *ngIf="newMessage.user">
+  <p>Hello, {{newMessage.user}}!</p>
+
+  <label>
+    Comments:
+    <textarea [(ngModel)]="newMessage.comments"
+        placeholder="Blah blah blah..."></textarea>
+  </label>
+
+  <p *ngIf="!isCommentGood()">Fuck you too! 💩👎🏽</p>
+
+  <food-select-widget></food-select-widget>
+
+  <button *ngIf="newMessage.comments && isCommentGood()">Submit</button>
+</div>

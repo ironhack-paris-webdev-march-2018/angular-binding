@@ -1,0 +1,15 @@
+<div>
+  <h2>Counter</h2>
+
+  <p>
+    The current count is
+    <b>{{myCount}}</b>.
+  </p>
+
+  <button (click)="increaseCount()">+1</button>
+  <button (click)="decreaseCount()">-1</button>
+
+  <div *ngIf="myCount !== 0">
+    <button (click)="resetCount()">Reset</button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<h3>Food Select</h3>
+
+<p *ngIf="mySelection">
+  Thank you for choosing a food!
+  {{selectFeedback}}
+</p>
+
+<select [(ngModel)]="mySelection" (change)="updateFeedback()">
+  <option value="">Select a food...</option>
+  <option value="pizza">Pizza</option>
+  <option value="falafel">Falafel</option>
+  <option value="pho">Pho</option>
+  <option value="mous">Moussakha (?)</option>
+  <option value="eggplant">Eggplant</option>
+</select>
